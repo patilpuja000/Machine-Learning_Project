@@ -61,11 +61,15 @@ will be used to evaluate its performance on unseen data. The Scikit-learn librar
 
 -> Building the Machine Learning Model
 Now it's time to build our machine learning model. As this research focuses on the status 0 or 1 which indicates classification. Hence ,I will be working with several classiication 
-algorithms such as Logistic Regression, k-Nearest Neighbors , Decision Trees and if possible try to use Random Forest or XGBoost.Each algorithm has its strengths and weaknesses, 
-and the choice depends on the specific problem and dataset. I will not consider Support Vector Machine becasue this dataset is huge and SVM is not efficient working with huge data.
-Also , i will be using SMOTE to make the target variable balanced for better model performance.
-The Scikit-learn library provides implementations of various classification models.
+algorithms such as Logistic Regression, k-Nearest Neighbors , Decision Trees along with cross validation and hyperparameters. Next will use the strongest models like Random Forest 
+,XGBoost and AdaBoost to check the accuracies.Each algorithm has its strengths and weaknesses,and the choice depends on the specific problem and dataset. I will not consider 
+Support Vector Machine becasue this dataset is huge and SVM is not efficient working with huge data.
 
+As this dataset is unbalanced i will be using SMOTE to make the target variable balanced for better model performance.The Scikit-learn library provides implementations of various 
+classification models. However, after some research a way to undersample the target variable is possible by using imbalanced learn class's RandomUnderSampler function  imporve 
+the perfomance of the model and I will use the undersample approach.
+
+I have also tried to train the model bt using simple neural network with relu activation for binary crossentropy. 
 
 #### Results
 -> Model Evaluation
